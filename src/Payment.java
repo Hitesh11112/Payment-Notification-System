@@ -5,17 +5,18 @@ public class Payment{
     this.amount = amt;
   }
   boolean validateAmt(User U){
-    if(amount <= 0 || amount > U.balance ) {
+    if(amount <= 0){ 
+      return false;
+    }
+    if(amount > U.balance ) {
       return false;
     }
     return true;
   }
   public void checkUser(User U){
-    boolean validated = validateAmt(U);
-    if(validated){
+    if(validateAmt(U)){
       U.deductBalance(amount);
       System.out.println("Payment Successful");
-      U.balance -= amount;
     }else {
       System.out.println("Payment Failed");
     }

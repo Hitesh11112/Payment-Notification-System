@@ -5,7 +5,7 @@ public class Main{
     obj1.setName("Hitesh Patwal");
 
     Payment pay = new Payment();
-    pay.setAmount(2000);
+    pay.setAmount(700);
     obj1.getShow();
     pay.checkUser(obj1);
     obj1.getShow(); 
